@@ -9,7 +9,7 @@ class VisitMonitoringController extends BaseController
 {
     public function index()
     {
-        $visits = VisitMonitoring::query()->latest()->paginate();
+        $visits = VisitMonitoring::query()->with('user')->latest()->paginate();
 
         return view('LaravelUserMonitoring::visits-monitoring.index', compact('visits'));
     }

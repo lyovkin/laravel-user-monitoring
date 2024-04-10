@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('action_type');
             $table->string('table_name');
 
+            $table->text('request_data')->nullable();
             $table->string('browser_name');
             $table->string('platform');
             $table->string('device');

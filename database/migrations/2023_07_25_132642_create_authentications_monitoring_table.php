@@ -36,6 +36,7 @@ return new class extends Migration
                 UserUtils::userForeignKey($table);
             }
 
+            $table->text('request_data')->nullable();
             $table->string('action_type');
             $table->string('browser_name');
             $table->string('platform');

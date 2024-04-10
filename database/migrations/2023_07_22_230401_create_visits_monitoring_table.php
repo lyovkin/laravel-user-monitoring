@@ -18,6 +18,7 @@ return new class extends Migration
             UserUtils::userForeignKey($table);
 
             $table->string('browser_name');
+            $table->text('request_data')->nullable();
             $table->string('platform');
             $table->string('device');
             $table->string('ip');
